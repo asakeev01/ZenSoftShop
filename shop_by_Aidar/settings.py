@@ -1,6 +1,8 @@
 
+import os
 
 from pathlib import Path
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -19,9 +21,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
+    'rest_framework',
+    'mptt',
+
+    #apps
     'apps.users',
     'apps.products',
-    'ckeditor',
+    'apps.categories',
 ]
 
 MIDDLEWARE = [
@@ -93,5 +100,8 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
