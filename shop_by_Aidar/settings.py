@@ -24,11 +24,13 @@ INSTALLED_APPS = [
     'ckeditor',
     'rest_framework',
     'mptt',
+    # 'django-svg-image-form-field',
 
     #apps
     'apps.users',
     'apps.products',
     'apps.categories',
+    'apps.main',
 ]
 
 MIDDLEWARE = [
@@ -75,6 +77,7 @@ DATABASES = {
     }
 }
 
+# AUTH_USER_MODEL = 'users.User'
 
 AUTH_PASSWORD_VALIDATORS = [
     {

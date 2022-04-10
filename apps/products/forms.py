@@ -21,8 +21,9 @@ class ProductItemForm(forms.ModelForm):
             item_colors = Color.objects.filter(product_item=item)
             for item_color in item_colors:
                 item_colors_dict[item_color] = 1
-            print(item_colors_dict)
-            print(colors_dict)
             if colors_dict == item_colors_dict:
                 raise ValidationError("These colors already exist")
         return self.cleaned_data
+
+
+

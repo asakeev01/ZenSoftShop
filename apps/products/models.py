@@ -7,9 +7,9 @@ from apps.categories.models import *
 class Product(models.Model):
     name = models.CharField(max_length = 200)
     description = RichTextField()
-    categories = models.ManyToManyField(Category, blank = True)
-    vendor_code = models.CharField(max_length = 10, unique = True)
-    price = models.DecimalField(max_digits = 20, decimal_places = 2)
+    categories = models.ManyToManyField(Category, blank=True)
+    vendor_code = models.CharField(max_length = 10, unique=True)
+    price = models.DecimalField(max_digits = 20, decimal_places=2)
     old_price = models.DecimalField(max_digits = 20, decimal_places=2, blank=True, null=True)
     compound = models.CharField(max_length = 255, blank = True, null = True)
     material = models.CharField(max_length = 255, blank = True, null = True)
@@ -54,7 +54,7 @@ class Size(models.Model):
 
 
 class ProductItemImage(models.Model):
-    productItem = models.ForeignKey(ProductItem, on_delete = models.CASCADE, related_name = "product_item_images")
+    productItem = models.ForeignKey(ProductItem, on_delete=models.CASCADE, related_name="product_item_images")
     image = models.ImageField(upload_to='productItemImage')
 
     def clean(self):
