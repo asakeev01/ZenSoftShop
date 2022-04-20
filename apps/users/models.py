@@ -1,22 +1,8 @@
 from django.dispatch import receiver
 from django.db.models.signals import post_save
-from django.contrib.auth.models import AbstractUser
-
 from django.contrib.auth.models import User
 
 from apps.products.models import *
-
-
-# class User(AbstractUser):
-#     username = models.CharField(max_length=255, unique=True)
-#     name = models.CharField(max_length=255, null=True)
-#     surname = models.CharField(max_length=255, null=True)
-#     email = models.EmailField(unique=True)
-#     password = models.CharField(max_length=20)
-#     number = models.IntegerField(null=True)
-#
-#     def __str__(self):
-#         return self.username
 
 
 class Favorite(models.Model):

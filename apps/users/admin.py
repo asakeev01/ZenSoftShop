@@ -4,5 +4,5 @@ from .models import *
 
 
 admin.site.register(Favorite)
-# admin.site.register(User)
+
 

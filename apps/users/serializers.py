@@ -2,6 +2,7 @@ from rest_framework import serializers
 
 from .models import *
 
+
 from django.contrib.auth.models import User
 
 
@@ -18,3 +19,9 @@ class UserCreateSerializer(serializers.ModelSerializer):
         model = User
         fields = ('username', 'first_name', 'last_name', 'email', 'password')
 
+
+class FavoriteSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Favorite
+        fields = ('products',)

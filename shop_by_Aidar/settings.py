@@ -22,8 +22,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ckeditor',
+    'colorfield',
     'rest_framework',
     'mptt',
+    'drf_yasg',
     # 'django-svg-image-form-field',
 
     #apps
@@ -31,6 +33,10 @@ INSTALLED_APPS = [
     'apps.products',
     'apps.categories',
     'apps.main',
+    'apps.news',
+    'apps.about',
+    'apps.basket',
+    'apps.order'
 ]
 
 MIDDLEWARE = [

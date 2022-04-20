@@ -2,7 +2,9 @@ from django import forms
 
 from .models import *
 
+
 class ProductItemForm(forms.ModelForm):
+
     class Meta:
         model = ProductItem
         fields = ['product', 'colors']
